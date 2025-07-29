@@ -11,6 +11,7 @@ class BilingualDataset(Dataset):
         self.tokenizer_tgt = tokenizer_tgt
         self.src_lang = src_lang
         self.tgt_lang = tgt_lang
+        self.seq_len = seq_len
 
         self.sos_token = torch.Tensor([tokenizer_src.token_to_id(['SOS'])], dtype=torch.int64)
         self.eos_token = torch.Tensor([tokenizer_src.token_to_id(['EOS'])], dtype=torch.int64)
